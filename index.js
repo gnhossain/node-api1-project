@@ -8,6 +8,8 @@ const server = express();
 
 server.use(express.json());
 
+server.use(cors()) ;
+
 server.get('/db', (req, res) =>{
 db.find()
   .then(db => {
